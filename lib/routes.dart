@@ -1,6 +1,7 @@
 import 'package:routefly/routefly.dart';
 
 import 'app/(public)/login_page.dart' as a0;
+import 'app/(public)/register_page.dart' as a1;
 
 List<RouteEntity> get routes => [
       RouteEntity(
@@ -12,9 +13,19 @@ List<RouteEntity> get routes => [
           const a0.LoginPage(),
         ),
       ),
+      RouteEntity(
+        key: '/register',
+        uri: Uri.parse('/register'),
+        routeBuilder: (ctx, settings) => Routefly.defaultRouteBuilder(
+          ctx,
+          settings,
+          const a1.RegisterPage(),
+        ),
+      ),
     ];
 
 const routePaths = (
   path: '/',
   login: '/login',
+  register: '/register',
 );

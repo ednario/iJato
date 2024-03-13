@@ -9,7 +9,6 @@ class LogoImage extends StatelessWidget {
     return Center(
       child: Image.asset(
         AppImages.logo,
-        width: 150,
       ),
     );
   }

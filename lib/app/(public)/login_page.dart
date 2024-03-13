@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
 
-import 'package:ijato/app/components/background-image.dart';
+import 'package:ijato/app/components/background_image.dart';
 import 'package:ijato/app/components/logo.dart';
-import 'package:ijato/app/components/button-primary.dart';
-import 'package:ijato/app/components/check-box.dart';
-import 'package:ijato/app/components/text-filed.dart';
-import 'package:ijato/app/components/underlined-text.dart';
+import 'package:ijato/app/components/button_primary.dart';
+import 'package:ijato/app/components/check_box.dart';
+import 'package:ijato/app/components/text_filed.dart';
+import 'package:ijato/app/components/underlined_text.dart';
 
 class LoginPage extends StatelessWidget {
   const LoginPage({super.key});
@@ -38,9 +38,8 @@ class _LoginPage extends StatelessWidget {
             child: const Column(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                SizedBox(height: 24),
                 LogoImage(),
-                SizedBox(height: 30),
+                SizedBox(height: 20),
                 CupertinoTextFieldExample(textFieldName: "login"),
                 SizedBox(height: 20),
                 CupertinoTextFieldExample(textFieldName: "senha"),
@@ -59,12 +58,22 @@ class _LoginPage extends StatelessWidget {
                 Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
-                    UnderlinedText(underlinedText: "Esqueci minha senha"),
-                    UnderlinedText(underlinedText: "Cadastrar-se")
+                    UnderlinedText(
+                      underlinedText: "Esqueci minha senha",
+                      nextState: "/register",
+                    ),
+                    UnderlinedText(
+                      underlinedText: "Cadastrar-se",
+                      nextState: "/register",
+                    )
                   ],
                 ),
                 SizedBox(height: 20),
-                ButtonPrimary(buttonPrimaryName: "Entrar"),
+                ButtonPrimary(
+                  color: Colors.blue,
+                  buttonPrimaryName: "Entrar",
+                  nextState: '/register',
+                ),
               ],
             ),
           ),
