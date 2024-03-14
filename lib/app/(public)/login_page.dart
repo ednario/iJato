@@ -4,7 +4,7 @@ import 'package:ijato/app/components/background_image.dart';
 import 'package:ijato/app/components/logo.dart';
 import 'package:ijato/app/components/button_primary.dart';
 import 'package:ijato/app/components/check_box.dart';
-import 'package:ijato/app/components/text_filed.dart';
+import 'package:ijato/app/components/text_field.dart';
 import 'package:ijato/app/components/underlined_text.dart';
 
 class LoginPage extends StatelessWidget {
@@ -61,7 +61,7 @@ class _LoginPage extends StatelessWidget {
                     ),
                     UnderlinedText(
                       underlinedText: "Cadastrar-se",
-                      nextState: "/register",
+                      nextState: "/user_type",
                     )
                   ],
                 ),
@@ -69,7 +69,7 @@ class _LoginPage extends StatelessWidget {
                 ButtonPrimary(
                   color: Colors.blue,
                   buttonPrimaryName: "Entrar",
-                  nextState: '/vehicle_reg',
+                  nextState: '/home',
                 ),
               ],
             ),

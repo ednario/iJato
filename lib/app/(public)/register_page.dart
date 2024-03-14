@@ -5,7 +5,7 @@ import 'package:ijato/app/components/background_image.dart';
 import 'package:ijato/app/components/check_box.dart';
 import 'package:ijato/app/components/logo.dart';
 import 'package:ijato/app/components/button_primary.dart';
-import 'package:ijato/app/components/text_filed.dart';
+import 'package:ijato/app/components/text_field.dart';
 import 'package:ijato/app/components/underlined_text.dart';
 
 class RegisterPage extends StatelessWidget {
@@ -66,7 +66,7 @@ class _RegisterPage extends StatelessWidget {
                   ButtonPrimary(
                     color: Colors.blue,
                     buttonPrimaryName: "cadastrar-se",
-                    nextState: "/login",
+                    nextState: "/vehicle_reg",
                   ),
                   SizedBox(height: 10),
                   Row(

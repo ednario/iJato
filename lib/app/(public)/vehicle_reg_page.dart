@@ -4,7 +4,7 @@ import 'package:ijato/app/components/background_image.dart';
 import 'package:ijato/app/components/button_primary.dart';
 import 'package:ijato/app/components/dropdown_button.dart';
 import 'package:ijato/app/components/logo.dart';
-import 'package:ijato/app/components/text_filed.dart';
+import 'package:ijato/app/components/text_field.dart';
 
 const List<String> list = <String>['One', 'Two', 'Three', 'Four'];
 
@@ -74,7 +74,7 @@ class _VehicleRegPage extends StatelessWidget {
                       child: ButtonPrimary(
                         color: Colors.blue,
                         buttonPrimaryName: "cadastrar",
-                        nextState: "/home",
+                        nextState: "/registered_vehicle",
                       ),
                     )
                   ],
