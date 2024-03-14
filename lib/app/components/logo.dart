@@ -15,7 +15,7 @@ class LogoImage extends StatelessWidget {
           AppImages.logo,
         ),
         onPressed: () {
-          Routefly.navigate("/home");
+          Routefly.navigate("/login");
         },
       ),
     );

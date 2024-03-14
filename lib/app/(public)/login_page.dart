@@ -69,7 +69,7 @@ class _LoginPage extends StatelessWidget {
                 ButtonPrimary(
                   color: Colors.blue,
                   buttonPrimaryName: "Entrar",
-                  nextState: '/register',
+                  nextState: '/vehicle_reg',
                 ),
               ],
             ),
