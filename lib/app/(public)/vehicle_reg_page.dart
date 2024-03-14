@@ -34,9 +34,17 @@ class _VehicleRegPage extends StatelessWidget {
           child: Container(
             padding: const EdgeInsets.symmetric(horizontal: 22.0),
             child: const Column(
-              mainAxisAlignment: MainAxisAlignment.center,
               children: [
+                SizedBox(height: 20),
                 LogoImage(),
+                SizedBox(height: 20),
+                Text(
+                  "Cadastrar veiculo:",
+                  style: TextStyle(
+                      fontSize: 24,
+                      color: Colors.white70,
+                      fontWeight: FontWeight.bold),
+                ),
                 SizedBox(height: 20),
                 DropdownButtonPrimary(textField: "tipo:"),
                 SizedBox(height: 20),
