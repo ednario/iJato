@@ -12,7 +12,7 @@ class AppWidget extends StatelessWidget {
       title: 'iJato',
       routerConfig: Routefly.routerConfig(
         routes: routes,
-        initialPath: routePaths.login,
+        initialPath: routePaths.home,
       ),
     );
   }

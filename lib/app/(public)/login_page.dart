@@ -26,15 +26,12 @@ class _LoginPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    Size size = MediaQuery.of(context).size;
-
     return Stack(
       children: [
         const BackgroundImage(),
         SafeArea(
           child: Container(
             padding: const EdgeInsets.symmetric(horizontal: 22.0),
-            width: size.width,
             child: const Column(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [

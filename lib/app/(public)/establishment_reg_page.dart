@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
 
 import 'package:ijato/app/components/background_image.dart';
 import 'package:ijato/app/components/check_box.dart';
@@ -8,22 +7,22 @@ import 'package:ijato/app/components/button_primary.dart';
 import 'package:ijato/app/components/text_filed.dart';
 import 'package:ijato/app/components/underlined_text.dart';
 
-class RegisterPage extends StatelessWidget {
-  const RegisterPage({super.key});
+class EstablishmentReg extends StatelessWidget {
+  const EstablishmentReg({super.key});
 
   @override
   Widget build(BuildContext context) {
     return const MaterialApp(
       debugShowCheckedModeBanner: false,
       home: Scaffold(
-        body: _RegisterPage(),
+        body: _EstablishmentReg(),
       ),
     );
   }
 }
 
-class _RegisterPage extends StatelessWidget {
-  const _RegisterPage();
+class _EstablishmentReg extends StatelessWidget {
+  const _EstablishmentReg();
 
   @override
   Widget build(BuildContext context) {
@@ -51,6 +50,31 @@ class _RegisterPage extends StatelessWidget {
                   CupertinoTextFieldExample(textFieldName: "senha"),
                   SizedBox(height: 15),
                   CupertinoTextFieldExample(textFieldName: "confirmar senha"),
+                  SizedBox(height: 15),
+                  Text(
+                    "Estabelecimento",
+                    style: TextStyle(color: Colors.white70),
+                  ),
+                  SizedBox(height: 15),
+                  CupertinoTextFieldExample(textFieldName: "CEP"),
+                  SizedBox(height: 15),
+                  Row(
+                    children: [
+                      SizedBox(
+                        width: 300,
+                        child: CupertinoTextFieldExample(textFieldName: "rua"),
+                      ),
+                      SizedBox(width: 15),
+                      SizedBox(
+                        width: 85,
+                        child: CupertinoTextFieldExample(textFieldName: "N°"),
+                      ),
+                    ],
+                  ),
+                  SizedBox(height: 15),
+                  CupertinoTextFieldExample(textFieldName: "nome"),
+                  SizedBox(height: 15),
+                  CupertinoTextFieldExample(textFieldName: "CPF/CNPJ"),
                   SizedBox(height: 5),
                   Row(
                     mainAxisAlignment: MainAxisAlignment.center,
@@ -65,7 +89,7 @@ class _RegisterPage extends StatelessWidget {
                   SizedBox(height: 5),
                   ButtonPrimary(
                     color: Colors.blue,
-                    buttonPrimaryName: "cadastrar-se",
+                    buttonPrimaryName: "cadastrar",
                     nextState: "/login",
                   ),
                   SizedBox(height: 10),
@@ -83,25 +107,11 @@ class _RegisterPage extends StatelessWidget {
                     ],
                   ),
                   SizedBox(height: 15),
-                  Column(
-                    children: [
-                      Text(
-                        "quer cadastrar seu lava jato?",
-                        style: TextStyle(color: Colors.white70),
-                      ),
-                      SizedBox(height: 10),
-                      ButtonPrimary(
-                        color: Colors.green,
-                        buttonPrimaryName: "cadastrar estabelecimento",
-                        nextState: "/establishment_reg",
-                      ),
-                    ],
-                  )
                 ],
               ),
             ),
           ),
-        ),
+        )
       ],
     );
   }

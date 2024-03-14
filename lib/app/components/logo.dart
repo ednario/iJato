@@ -1,4 +1,7 @@
-import 'package:flutter/material.dart';
+import 'package:flutter/cupertino.dart';
+
+import 'package:routefly/routefly.dart';
+
 import 'package:ijato/app/shared/app_images.dart';
 
 class LogoImage extends StatelessWidget {
@@ -7,8 +10,13 @@ class LogoImage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Center(
-      child: Image.asset(
-        AppImages.logo,
+      child: CupertinoButton(
+        child: Image.asset(
+          AppImages.logo,
+        ),
+        onPressed: () {
+          Routefly.navigate("/home");
+        },
       ),
     );
   }
