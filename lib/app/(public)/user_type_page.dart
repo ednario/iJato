@@ -37,7 +37,7 @@ class _UserTypePage extends StatelessWidget {
                 ButtonPrimary(
                   color: Colors.blue,
                   buttonPrimaryName: "Usuario",
-                  nextState: '/login',
+                  nextState: '/register',
                 ),
                 SizedBox(height: 20),
                 ButtonPrimary(
