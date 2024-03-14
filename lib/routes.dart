@@ -1,11 +1,12 @@
 import 'package:routefly/routefly.dart';
 
-import 'app/(public)/establishment_reg_page.dart' as a2;
-import 'app/(public)/home_page.dart' as a1;
+import 'app/(public)/establishment_reg_page.dart' as a3;
+import 'app/(public)/home_page.dart' as a2;
 import 'app/(public)/login_page.dart' as a0;
-import 'app/(public)/register_page.dart' as a5;
-import 'app/(public)/user_type_page.dart' as a3;
-import 'app/(public)/vehicle_reg_page.dart' as a4;
+import 'app/(public)/register_page.dart' as a6;
+import 'app/(public)/registered_vehicle_page.dart' as a1;
+import 'app/(public)/user_type_page.dart' as a4;
+import 'app/(public)/vehicle_reg_page.dart' as a5;
 
 List<RouteEntity> get routes => [
   RouteEntity(
@@ -18,12 +19,21 @@ List<RouteEntity> get routes => [
     ),
   ),
   RouteEntity(
+    key: '/registered_vehicle',
+    uri: Uri.parse('/registered_vehicle'),
+    routeBuilder: (ctx, settings) => Routefly.defaultRouteBuilder(
+      ctx,
+      settings,
+      const a1.RegisteredVehiclePage(),
+    ),
+  ),
+  RouteEntity(
     key: '/home',
     uri: Uri.parse('/home'),
     routeBuilder: (ctx, settings) => Routefly.defaultRouteBuilder(
       ctx,
       settings,
-      const a1.HomePage(),
+      const a2.HomePage(),
     ),
   ),
   RouteEntity(
@@ -32,7 +42,7 @@ List<RouteEntity> get routes => [
     routeBuilder: (ctx, settings) => Routefly.defaultRouteBuilder(
       ctx,
       settings,
-      const a2.EstablishmentReg(),
+      const a3.EstablishmentReg(),
     ),
   ),
   RouteEntity(
@@ -41,7 +51,7 @@ List<RouteEntity> get routes => [
     routeBuilder: (ctx, settings) => Routefly.defaultRouteBuilder(
       ctx,
       settings,
-      const a3.UserTypePage(),
+      const a4.UserTypePage(),
     ),
   ),
   RouteEntity(
@@ -50,7 +60,7 @@ List<RouteEntity> get routes => [
     routeBuilder: (ctx, settings) => Routefly.defaultRouteBuilder(
       ctx,
       settings,
-      const a4.VehicleRegPage(),
+      const a5.VehicleRegPage(),
     ),
   ),
   RouteEntity(
@@ -59,7 +69,7 @@ List<RouteEntity> get routes => [
     routeBuilder: (ctx, settings) => Routefly.defaultRouteBuilder(
       ctx,
       settings,
-      const a5.RegisterPage(),
+      const a6.RegisterPage(),
     ),
   ),
 ];
@@ -67,6 +77,7 @@ List<RouteEntity> get routes => [
 const routePaths = (
   path: '/',
   login: '/login',
+  registeredVehicle: '/registered_vehicle',
   home: '/home',
   establishmentReg: '/establishment_reg',
   userType: '/user_type',
